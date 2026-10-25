@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Service Finder</title>
+    <style>
+        * {
+           box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family:  Arial, sans-serif;
+            background:  #f5f7fd;
+            color:  #222;
+        }
+
+        header {
+            background: #102a43;
+            color: white;
+           padding: 20px 7%;
+           display: flex;
+           justify-content: space-between;
+         align-items: center;
+         flex-wrap:  wrap;
+         gap: 12px;
+        }
+         header h2 { margin: 0; }
+         nav a {
+            color: white;
+            text-decoration:none;
+            margin: 8px;
+         }
+
+         .hero {
+            text-align: center;
+            padding: 45px 15px;
+            background:  #dceeff;
+         }
+
+         .hero h1 { color: #102a43; }
+         input, select, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin:7px;
+            border: 1px solid #ccc;
+            font-size:  15px;
+         }
+
+         button :hover { background: #05636d; }
+
+         .container {
+            max-width:  1000px;
+            margin: 25px;
+            padding: 15px;
+         }
+
+         .panel, .worker-card {
+            background: white;
+         padding: 20px;
+         border-radius: 12px;
+         box-shadow: 0 2px 10px #00000010;
+         }
+
+         .worker-card h3 { color: #087e8b; }
+
+         .cell-link {
+            display : inline-block;
+            background:  #16803c;
+            color: white;
+            padding: 10px 16px;
+            text-decoration:  none;
+            border-radius: 7px;
+            margin-top: 5px;
+         }
+
+         .hidden { display: none}
+         small { color: #666; }
+         footer {
+            text-align: center;
+            padding: 20px;
+
+         }
+
+         </style>
+         </head>
+
+
+<body>
+
+    <header>
+        <h2>local saathi</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#register">Register</a>
+            worker</a>
+            <a href="#bookings">My Bookings</a>
+            </nav>
+            </header>
+
+            <section> class="hero" id="home">
+                <h1>Apne saher Main Bharosemand worker dhoondhen</h1>
+                <p>Electronic, plumber, aur carpenter raaj mistri- sab ek click me.</p>
+                      
+                    <div> class="container">
+                        <input id="city search"
+                        placeholder="apna saher ya apna area likhen">
+                
+                    <select id="serviceSerch">
+                        <option value="">Sabhi service</option>
+                    <option >Electronic</option>
+                      <option >plumber</option> 
+                     <option >carpenter</option>
+                     <option >Ac Repair</option>
+                     <option >Mistri</option>
+                     </select>
+                     <button>
+                        onclick="searchWor kers( )">Worker search Karein</button>
+                        </div>
+                        </section>
+                        <Main class="container">
+
+                            <section>
+                                <h2>Available Workers</h2>
+                                <div id="Workerlist"></div>
+                                </section>
+                        
+                      <section class="panel" id="Register">
+                        <h2>WorkerRegister</h2>
+                        <p>Worker apni sahidetail bhare.</p>
+
+                        <form id="Worker form">
+                            <input id="worker name"
+                            placeholder="Worker ka pura name" required>
+
+                    <input id="Worker phone" type="tel"
+                    pattern="[6-9] [0-9] {9}"
+                    maxlength="10"
+                    placeholder="10 digit mobilenumber" required>
+
+                    <select  id="Workerservice" required>
+                        <option value="">Kaam chunain</option>
+                         <option >Electrician</option>
+                         <option >plumber</option>
+                         <option >carpenter</option>
+                         <option >AC Repair</option>
+                         <option >Mistri</option>
+                         </select>
+                         <input id="WorkerCity"
+                         placeholder="Sahar" required>
+                         <input id="worker Area"
+                         placeholder="Mohalla ya area" required>
+
+                         <textarea id="worker Address"
+                         placeholder="Kaam ka pata (optional)"></textarea>
+                   <button type="submit">Register Worker</button>
+                   </form>
+                   </section>
+                   <section class="panel hidden" id="bookingFormSection">
+              <h2>Booking request</h2>
+              <p id="selectedworker"></p>
+
+              <form id="bookingForm">
+               <input id="customerName"
+               placeholder="pka naam"required>
+               
+               <input id="customerphone" type="tel" pattern="[6-9][0-9]{9}"
+               maxlength="10"
+               placeholder="Apka mobile number"required>
+           <input id="customerCity"
+           placeholder="Aapka area / mohalla"required>
+
+            <textarea id="problem" placeholder="kya kaam karbana hai" required></textarea>
+             
+
+            <button type="submit">booking request bhejen</button>
+            <button type="button">
+
+                oneclick="closeBooking()">Cancel</button>
+                </form>
+                </section>
+
+                <section class="panel" id="bookings">
+                    <h2 My Bookinga-demo></h2>
+                               <p>is browser main save hui booking request:</p>
+                <div id="Bookingslist"></div>
+
+                </section>
+                </Main>
+
+                <footer>
+                  <small>Local Dost----local Service Platform</small>
+                  </footer>
+
+                  <script>
+
+                    const getData =Key=> {
+                        try {
+                            return
+                            JSON.parse(localStorage.getItem(Key)) || [];
+                        }
+                        catch {
+                            return[];
+                        }
+                    };
+
+            let worker =getData("localDostworker");
+            let booking =getData("localDostbookings");
+            let chosenWorker =null;
+          
+            function saveData() {
+                localStorage.setItem("localDostworker", JSON.stringify(workers));
+                localStorage.setItem("localDostBookings", JSON.stringify(bookings));
+            }
+            function safe(value) {
+                return String(value ?? " ").replace(/[&<>"']/g, char=> ({
+                    "&": "&amp;",
+                   "<": "&lt;",
+                   ">": "&gt;",
+                   "": "&quot;",
+                   "'": "&#39;",
+                }) [char]);
+            }
+
+</body>
+</html>

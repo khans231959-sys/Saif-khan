@@ -1,0 +1,47 @@
+! <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abc{
+            color: crimson;
+        }
+        #abc{
+            color: rgb(20, 220, 190);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="abc">this is class 1</h1>
+    <h1 class="abc">this is class 2</h1>
+
+    <h1 id="abc">this is id 1</h1>
+    <h1 id="abc">this is id 2</h1>
+    <h1 id="abc">this is id 1</h1>
+    <h1 id="abc">this is id 1</h1>
+    <script>
+        
+       let a=document.queryselector('.abc');
+       let b=document.queryseletor('#abc');
+       let d=document.gatelementrybyclassname('abc');
+       let h=document.getElementsByClassName('abc')[2];
+
+       console.log(a);
+       console.log(b);
+       console.log(d);
+       console.log(h);
+       h.innerHTML="HGJF";
+
+       let c=document.gatelementbyid ('.abc');
+       let e=document.gatelementrybytagname('h1');
+       let f=document.queryselectorall('.abc');
+       let g=document.queryselectorall('#abc');
+       let j=document.gatelementybyid('abc')[0];
+       condole.log(g);
+
+    </script>
+
+</body>
+</html>
