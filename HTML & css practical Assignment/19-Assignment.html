@@ -1,0 +1,207 @@
+
+<!--
+Assignment 19
+Question: Audit every earlier HTML file and add missing meta tags.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page description -->
+    <meta name="description"
+          content="An HTML meta tags audit checklist and example for web development students.">
+
+    <!-- Author information -->
+    <meta name="author" content="Student">
+
+    <!-- Browser compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Assignment 19 - Meta Tags Audit</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 30px 15px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #174a7e;
+        }
+
+        h2 {
+            color: #174a7e;
+            margin-top: 25px;
+        }
+
+        .intro {
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #174a7e;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f0f4f8;
+        }
+
+        .status {
+            color: #16703c;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: #eaf4ff;
+            border-left: 4px solid #1769aa;
+            padding: 15px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 3px 5px;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            color: #666;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>HTML Meta Tags Audit</h1>
+
+        <p class="intro">
+            Assignment 19: Check important meta tags and make sure
+            earlier HTML files contain the required metadata.
+        </p>
+
+        <h2>Meta Tags Checklist</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Meta Tag</th>
+                    <th>Purpose</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>charset</td>
+                    <td>Supports correct text encoding.</td>
+                    <td class="status">Included</td>
+                </tr>
+
+                <tr>
+                    <td>viewport</td>
+                    <td>Helps pages fit mobile screens.</td>
+                    <td class="status">Included</td>
+                </tr>
+
+                <tr>
+                    <td>description</td>
+                    <td>Describes the page content.</td>
+                    <td class="status">Included</td>
+                </tr>
+
+                <tr>
+                    <td>author</td>
+                    <td>Identifies the page author.</td>
+                    <td class="status">Included</td>
+                </tr>
+
+                <tr>
+                    <td>title</td>
+                    <td>Sets the browser tab title.</td>
+                    <td class="status">Included</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>How to Audit Earlier HTML Files</h2>
+
+        <ol>
+            <li>Open each earlier HTML file in VS Code.</li>
+            <li>Find the <code>&lt;head&gt;</code> section.</li>
+            <li>Check whether the charset and viewport tags exist.</li>
+            <li>Add any missing description or author metadata if appropriate.</li>
+            <li>Save the file and test it in a browser.</li>
+        </ol>
+
+        <div class="note">
+            <strong>Important:</strong>
+            This page demonstrates the audit checklist.
+            You must check and update your earlier HTML files separately.
+            Creating this page alone does not audit or modify those files.
+        </div>
+
+        <footer>
+            &copy; 2026 HTML & CSS Practical Assignment
+        </footer>
+
+    </main>
+
+</body>
+</html>

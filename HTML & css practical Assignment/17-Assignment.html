@@ -1,0 +1,227 @@
+
+<!--
+Assignment 12
+Question: Build a job-application style form using every input type covered.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 25px 15px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #174a7e;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 6px;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="image"]),
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 6px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .option label {
+            display: inline;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #1769aa;
+        }
+
+        input[type="reset"] {
+            background-color: #666;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #104c7c;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Job Application Form</h1>
+        <p>Please fill in your details to apply for a job.</p>
+
+        <form action="#" method="post">
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Create a password" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="interview">Preferred Interview Time:</label>
+            <input type="time" id="interview" name="interview">
+
+            <label for="joining">Available Joining Date:</label>
+            <input type="datetime-local" id="joining" name="joining">
+
+            <label for="month">Preferred Joining Month:</label>
+            <input type="month" id="month" name="month">
+
+            <label for="week">Preferred Interview Week:</label>
+            <input type="week" id="week" name="week">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"
+                   min="18" max="65" placeholder="Enter your age">
+
+            <label for="website">Portfolio Website:</label>
+            <input type="url" id="website" name="website"
+                   placeholder="https://example.com">
+
+            <label for="search">Search Job Role:</label>
+            <input type="search" id="search" name="search"
+                   placeholder="e.g. Web Developer">
+
+            <label for="color">Choose Your Preferred Theme Color:</label>
+            <input type="color" id="color" name="color" value="#1769aa">
+
+            <label for="experience">Years of Experience (0–20):</label>
+            <input type="range" id="experience" name="experience"
+                   min="0" max="20" value="2">
+
+            <label>Gender:</label>
+            <div class="option">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <label for="job">Select Job Position:</label>
+            <select id="job" name="job" required>
+                <option value="">Choose a position</option>
+                <option value="developer">Web Developer</option>
+                <option value="designer">Web Designer</option>
+                <option value="manager">Project Manager</option>
+                <option value="intern">Intern</option>
+            </select>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume"
+                   accept=".pdf,.doc,.docx">
+
+            <label for="message">Why should we hire you?</label>
+            <textarea id="message" name="message"
+                      placeholder="Write a short introduction..."></textarea>
+
+            <div class="option">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions.</label>
+            </div>
+
+            <input type="hidden" name="formType" value="jobApplication">
+
+            <div class="buttons">
+                <input type="submit" value="Apply Now">
+                <input type="reset" value="Clear Form">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
