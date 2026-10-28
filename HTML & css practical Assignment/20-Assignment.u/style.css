@@ -1,0 +1,210 @@
+/* Assignment 20: Submit the complete multi-page HTML project (Home, About, Registration, Contact). */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+header {
+    background-color: #174a7e;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+nav {
+    background-color: #10365d;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #2879bd;
+}
+
+main {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 18px;
+}
+
+.hero {
+    text-align: center;
+    background-color: white;
+    padding: 45px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.hero h2 {
+    color: #174a7e;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.button,
+button {
+    display: inline-block;
+    background-color: #174a7e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 11px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover,
+button:hover {
+    background-color: #2879bd;
+}
+
+.content {
+    background-color: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.content h2 {
+    color: #174a7e;
+    margin-bottom: 12px;
+    margin-top: 10px;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 220px;
+    background-color: #eaf3fc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #174a7e;
+    margin-bottom: 8px;
+}
+
+.goals {
+    padding-left: 25px;
+}
+
+.form-container {
+    background-color: white;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.form-container h2 {
+    color: #174a7e;
+    margin-bottom: 18px;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid #2879bd;
+    border-color: transparent;
+}
+
+form button {
+    margin-top: 18px;
+}
+
+.contact-details {
+    background-color: #eaf3fc;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.note {
+    font-size: 13px;
+    color: #666;
+    margin-top: 15px;
+}
+
+footer {
+    background-color: #10365d;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .content,
+    .form-container {
+        padding: 18px;
+    }
+}
