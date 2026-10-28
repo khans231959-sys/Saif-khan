@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="container">
+
+        <h1>Job Application Form</h1>
+        <p>Please fill in your details to apply for a job.</p>
+
+        <form action="#" method="post">
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Create a password" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="interview">Preferred Interview Time:</label>
+            <input type="time" id="interview" name="interview">
+
+            <label for="joining">Available Joining Date:</label>
+            <input type="datetime-local" id="joining" name="joining">
+
+            <label for="month">Preferred Joining Month:</label>
+            <input type="month" id="month" name="month">
+
+            <label for="week">Preferred Interview Week:</label>
+            <input type="week" id="week" name="week">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"
+                   min="18" max="65" placeholder="Enter your age">
+
+            <label for="website">Portfolio Website:</label>
+            <input type="url" id="website" name="website"
+                   placeholder="https://example.com">
+
+            <label for="search">Search Job Role:</label>
+            <input type="search" id="search" name="search"
+                   placeholder="e.g. Web Developer">
+
+            <label for="color">Choose Your Preferred Theme Color:</label>
+            <input type="color" id="color" name="color" value="#1769aa">
+
+            <label for="experience">Years of Experience (0–20):</label>
+            <input type="range" id="experience" name="experience"
+                   min="0" max="20" value="2">
+
+            <label>Gender:</label>
+            <div class="option">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <label for="job">Select Job Position:</label>
+            <select id="job" name="job" required>
+                <option value="">Choose a position</option>
+                <option value="developer">Web Developer</option>
+                <option value="designer">Web Designer</option>
+                <option value="manager">Project Manager</option>
+                <option value="intern">Intern</option>
+            </select>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume"
+                   accept=".pdf,.doc,.docx">
+
+            <label for="message">Why should we hire you?</label>
+            <textarea id="message" name="message"
+                      placeholder="Write a short introduction..."></textarea>
+
+            <div class="option">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions.</label>
+            </div>
+
+            <input type="hidden" name="formType" value="jobApplication">
+
+            <div class="buttons">
+                <input type="submit" value="Apply Now">
+                <input type="reset" value="Clear Form">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+
