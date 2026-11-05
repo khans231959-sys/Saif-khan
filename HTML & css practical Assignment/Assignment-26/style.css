@@ -1,0 +1,110 @@
+
+
+/*
+Assignment 26
+Demonstrate the CSS Box Model.
+*/
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+}
+
+header {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+main {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.margin {
+    background-color: #ffe0b2;
+    padding: 35px;
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.border {
+    background-color: #ffcc80;
+    border: 8px solid #e65100;
+    padding: 30px;
+}
+
+.padding {
+    background-color: #c8e6c9;
+    padding: 30px;
+}
+
+.content {
+    background-color: #bbdefb;
+    padding: 25px;
+    color: #123;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.content h3 {
+    color: #0d47a1;
+}
+
+.description {
+    background-color: white;
+    padding: 25px;
+    margin-top: 35px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.description h2 {
+    color: #17324d;
+}
+
+.description p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    .margin {
+        padding: 15px;
+    }
+
+    .border {
+        padding: 15px;
+    }
+
+    .padding {
+        padding: 15px;
+    }
+}
+
+</style
