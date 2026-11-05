@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Shopping Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: grid;
+
+            grid-template-areas:
+                "header header"
+                "sidebar products";
+
+            grid-template-columns: 220px 1fr;
+            min-height: 100vh;
+            gap: 15px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #222;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background-color: white;
+            padding: 20px;
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside li {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .products {
+            grid-area: products;
+            padding: 20px;
+        }
+
+        .products h2 {
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+
+            grid-template-columns:
+            repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 20px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px #ccc;
+        }
+
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .product h3 {
+            margin: 12px 0;
+        }
+
+        .product p {
+            color: green;
+            font-size: 18px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "products";
+
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            My Shopping Store
+        </header>
+
+        <aside>
+            <h2>Categories</h2>
+
+            <ul>
+                <li>Electronics</li>
+                <li>Mobiles</li>
+                <li>Laptops</li>
+                <li>Clothing</li>
+                <li>Accessories</li>
+            </ul>
+        </aside>
+
+        <section class="products">
+
+            <h2>Our Products</h2>
+
+            <div class="product-grid">
+
+                <div class="product">
+                    <img src="https://placehold.co/300x200?text=Laptop" alt="Laptop">
+                    <h3>Laptop</h3>
+                    <p>₹50,000</p>
+                    <button>Buy Now</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://placehold.co/300x200?text=Mobile" alt="Mobile">
+                    <h3>Mobile</h3>
+                    <p>₹20,000</p>
+                    <button>Buy Now</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://placehold.co/300x200?text=Headphones" alt="Headphones">
+                    <h3>Headphones</h3>
+                    <p>₹2,000</p>
+                    <button>Buy Now</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://placehold.co/300x200?text=Watch" alt="Watch">
+                    <h3>Smart Watch</h3>
+                    <p>₹3,000</p>
+                    <button>Buy Now</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://placehold.co/300x200?text=Camera" alt="Camera">
+                    <h3>Camera</h3>
+                    <p>₹30,000</p>
+                    <button>Buy Now</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://placehold.co/300x200?text=Shoes" alt="Shoes">
+                    <h3>Shoes</h3>
+                    <p>₹2,500</p>
+                    <button>Buy Now</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
