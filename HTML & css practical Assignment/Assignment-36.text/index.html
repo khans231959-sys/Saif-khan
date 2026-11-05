@@ -1,0 +1,122 @@
+
+<!--
+Assignment 33
+Question: Build a product-listing style layout using flex-wrap.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        
+/*
+Assignment 33
+Build a product-listing layout using flex-wrap.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Main Section */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+main h2 {
+    text-align: center;
+    color: #17324d;
+    margin-bottom: 25px;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px #00000015;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    color: #17324d;
+}
+
+.product-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.product-card h4 {
+    color: #15803d;
+    font-size: 20px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #17324d;
+}
+
+/* Footer */
+footer {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+    </style>
