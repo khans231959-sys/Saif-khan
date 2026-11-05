@@ -1,0 +1,145 @@
+
+<!--
+Assignment 28
+Question: Fix a supplied page where overflow is breaking the layout.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Fix</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        
+/*
+Assignment 28
+Fix a page where overflow is breaking the layout.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+}
+
+header {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    /* Prevent content from breaking outside */
+    overflow: hidden;
+}
+
+.card {
+    background-color: #dbeafe;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+
+    /* Content stays inside the card */
+    overflow: auto;
+}
+
+.card h3 {
+    color: #1d4ed8;
+}
+
+.long-text {
+    background-color: #dcfce7;
+    padding: 15px;
+    border: 1px solid green;
+
+    /* Break long words to fit the container */
+    overflow-wrap: anywhere;
+}
+
+footer {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CSS Overflow Problem</h1>
+        <p>Learning how to fix overflow issues</p>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Fixed Layout</h2>
+
+            <div class="card">
+                <h3>Card One</h3>
+                <p>
+                    This is a sample card. Its content will stay
+                    inside the available space without breaking
+                    the webpage layout.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Card Two</h3>
+                <p>
+                    CSS overflow properties help us control
+                    content that becomes larger than its container.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Card Three</h3>
+                <p>
+                    This card also adjusts according to the
+                    available screen size.
+                </p>
+            </div>
+
+            <div class="long-text">
+                ThisIsAVeryLongWordWithoutSpacesThatCouldBreakTheLayoutIfOverflowIsNotHandledCorrectly.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for Assignment 28</p>
+    </footer>
+
+</body>
+</html>

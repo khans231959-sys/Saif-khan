@@ -1,0 +1,155 @@
+
+<!--
+Assignment 24
+Question: Create a small design-token stylesheet (colours, font sizes) using CSS variables.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Design Tokens</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        
+/*
+Assignment 24
+Create design tokens using CSS variables.
+*/
+
+/* Design Tokens */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --background-color: #f1f5f9;
+    --card-color: #ffffff;
+    --text-color: #334155;
+
+    --small-font: 14px;
+    --medium-font: 18px;
+    --large-font: 30px;
+
+    --spacing: 20px;
+}
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: var(--large-font);
+}
+
+header p {
+    font-size: var(--medium-font);
+}
+
+/* Main Section */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 var(--spacing);
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-color);
+    padding: 25px;
+    margin-bottom: var(--spacing);
+    border-radius: 10px;
+}
+
+/* Headings */
+.card h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+/* Paragraph */
+.card p {
+    font-size: var(--medium-font);
+    line-height: 1.6;
+}
+
+/* Button */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--small-font);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Design System</h1>
+        <p>Learning CSS Variables</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Welcome to My Website</h2>
+
+            <p>
+                CSS variables help us store colours,
+                font sizes and other design values.
+            </p>
+
+            <button>Learn More</button>
+        </section>
+
+        <section class="card">
+            <h2>Why Use CSS Variables?</h2>
+
+            <p>
+                We can change the design of a complete
+                website by updating variables in one place.
+            </p>
+
+            <button>Explore</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for Assignment 24</p>
+    </footer>
+
+</body>
+</html>

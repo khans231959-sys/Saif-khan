@@ -1,0 +1,208 @@
+
+<!--
+Assignment 29
+Question: Style a landing-page hero section using position and z-index.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Hero Section</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        
+/*
+Assignment 29
+Style a landing-page hero section using position and z-index.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #172554;
+    color: white;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 500px;
+    background: linear-gradient(120deg, #2563eb, #7c3aed);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    overflow: hidden;
+}
+
+/* Main Content */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+    background-color: white;
+    color: #2563eb;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Decorative Circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle-one {
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff30;
+    top: -70px;
+    right: 10%;
+}
+
+.circle-two {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff20;
+    bottom: -60px;
+    right: 35%;
+}
+
+/* Floating Card */
+.hero-card {
+    position: absolute;
+    z-index: 2;
+    right: 10%;
+    bottom: 80px;
+    background-color: white;
+    color: #172554;
+    padding: 25px;
+    border-radius: 12px;
+    width: 230px;
+    box-shadow: 0 8px 25px #00000030;
+}
+
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 7px;
+    }
+
+    .hero {
+        padding: 50px 7%;
+        min-height: 650px;
+        align-items: flex-start;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-card {
+        right: 7%;
+        bottom: 35px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MyWebsite</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-content">
+            <h1>Build Your Future With Us</h1>
+
+            <p>
+                Learn new skills, explore opportunities
+                and create something amazing.
+            </p>
+
+            <button>Get Started</button>
+        </div>
+
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+
+        <div class="hero-card">
+            <h2>Welcome!</h2>
+            <p>Start your learning journey today.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 MyWebsite. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

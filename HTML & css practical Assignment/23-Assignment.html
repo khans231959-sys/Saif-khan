@@ -1,0 +1,153 @@
+
+<!--
+Assignment 23
+Question: Restyle the resume page with a proper font pairing and colour palette.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<style>
+
+   
+/*
+Assignment 23
+Restyle the resume page with proper fonts and colours.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Merriweather:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: #e9edf2;
+    color: #253247;
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.resume {
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    box-shadow: 0 8px 28px #182b451c;
+}
+
+aside {
+    background-color: #17324d;
+    color: white;
+    padding: 32px;
+}
+
+aside h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+}
+
+aside h2 {
+    color: #9bd5ce;
+    border-bottom: 1px solid #ffffff55;
+    padding-bottom: 6px;
+    margin-top: 30px;
+}
+
+.role {
+    color: #b8d9e8;
+}
+
+article {
+    padding: 38px;
+}
+
+article h2 {
+    color: #176b67;
+    font-family: 'Merriweather', serif;
+    border-bottom: 2px solid #d8e8e5;
+    padding-bottom: 8px;
+}
+
+article section {
+    margin-bottom: 28px;
+}
+
+article p {
+    line-height: 1.7;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 12px;
+    }
+
+    .resume {
+        grid-template-columns: 1fr;
+    }
+}
+ 
+</style>
+
+</head>
+<body>
+
+    <main class="resume">
+
+        <aside>
+            <h1>Saif Khan</h1>
+            <p class="role">Junior Web Developer</p>
+
+            <h2>Contact</h2>
+            <p>Email: saif@example.com</p>
+            <p>Location: India</p>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Git and GitHub</li>
+            </ul>
+        </aside>
+
+        <article>
+
+            <section>
+                <h2>Profile</h2>
+                <p>
+                    I am a motivated beginner web developer.
+                    I enjoy learning HTML, CSS and Java.
+                    My goal is to create attractive websites.
+                </p>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <h3>Bachelor's Degree</h3>
+                <p>Invertis University</p>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                <h3>Local Services Website</h3>
+                <p>
+                    A website project that helps people find
+                    electricians, plumbers and carpenters.
+                </p>
+            </section>
+
+        </article>
+
+    </main>
+
+</body>
+</html>
