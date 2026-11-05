@@ -1,0 +1,98 @@
+
+<!--
+Assignment 31
+Question: Create a simple responsive menu bar using display:flex.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu Bar</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        
+/*
+Assignment 31
+Create a simple responsive menu bar using display:flex.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+
+/* Header */
+header {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menu Bar */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #172554;
+    padding: 18px;
+}
+
+/* Menu Links */
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #facc15;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #1e3a8a;
+}
+
+/* Footer */
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive Menu */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+    </style>
